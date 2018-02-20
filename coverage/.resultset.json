@@ -1,0 +1,28 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/sabrinarobinson/Turing/1mod/projects/mastermind/lib/game.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1519160930
+  }
+}
