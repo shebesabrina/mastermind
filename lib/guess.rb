@@ -1,10 +1,10 @@
 require 'pry'
 class Guess
-  attr_reader :response,
+  attr_reader :player_input,
               :color_sequence
 
-  def initialize(response, color_sequence)
-    @response = response.split('')
+  def initialize(player_input, color_sequence)
+    @player_input = player_input.split('')
     @color_sequence = color_sequence.split('')
   end
 
@@ -13,15 +13,15 @@ class Guess
   end
 
   def correct?
-    @response == @color_sequence
+    @player_input == @color_sequence
   end
 
   def correct_elements
-    (@response & @color_sequence).count
+    (@player_input & @color_sequence).count
   end
 
   def correct_position
-     @response.select.with_index { |item, index|
+     @player_input.select.with_index { |item, index|
        item == @color_sequence[index]
      }.count
   end

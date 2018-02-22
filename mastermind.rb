@@ -1,6 +1,7 @@
 require './lib/game'
 require './lib/guess'
 
+
 class Mastermind
   def initialize
     @game = Game.new
@@ -19,7 +20,6 @@ class Mastermind
       player who solves his opponent's secret code with fewer guesses.)
     elsif response == "q" || response == "quit"
       puts "Bye!"
-      #exit game
     else
       puts "Try again."
     end

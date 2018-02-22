@@ -1,11 +1,11 @@
 require 'pry'
 
 class Game
-  attr_reader :colors,
+  attr_reader :color_sequence,
               :player_input
-  # colors = ("rrgb").chars.sample(4)
+  # color_sequence = ("rrgb").chars.sample(4)
   def initialize
-    @colors = 'rrgb'
+    @color_sequence = 'rrgb'
     @guesses_count = 0
   end
 
@@ -25,11 +25,11 @@ class Game
       elsif @player_input.length > 4
         puts "too long"
       else
-        @guess = Guess.new(@player_input, @colors)
+        @guess = Guess.new(@player_input, @color_sequence)
         if @guess.correct?
           puts 'you win'
           break
-        else
+        else 
           puts @guess.evaluate_guess
         end
       end
@@ -45,6 +45,6 @@ class Game
   end
 
   def cheat
-    puts @colors
+    puts @color_sequence
   end
 end

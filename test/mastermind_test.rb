@@ -1,5 +1,5 @@
 require './test/test_helper'
-require './lib/mastermind'
+require './mastermind'
 
 
 class MastermindTest < Minitest::Test
