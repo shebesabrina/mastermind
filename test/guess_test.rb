@@ -1,7 +1,7 @@
 require './test/test_helper'
 require './lib/game'
 require './lib/guess'
-
+require 'pry'
 
 class GuessesTest < Minitest::Test
   def setup
@@ -34,6 +34,10 @@ class GuessesTest < Minitest::Test
 
   def test_it_can_determine_corect_position
     assert_equal "b", @guess_2.correct_position
+  end
+
+  def test_it_can_count_guesses
+    assert_equal 2, @guess_2.response.count
   end
 
 end

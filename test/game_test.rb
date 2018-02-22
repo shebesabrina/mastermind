@@ -21,7 +21,10 @@ class GameTest < Minitest::Test
   end
 
   def test_it_can_provide_the_instructions
-    result =   "OBJECT OF THE GAME\n\n The object of MASTERMIND (r) is to guess a secret code consisting of a series of 4 colored pegs. Each guest results in feedback narrowing down the possibilities of the code. The winner is the player who solves his opponent's secret code with fewer guesses."
+    result = %Q(OBJECT OF THE GAME\n\n The object of MASTERMIND (r) is to guess
+    a secret code consisting of a series of 4 colored pegs. Each guest results
+     in feedback narrowing down the possibilities of the code. The winner is the
+      player who solves his opponent's secret code with fewer guesses.)
     assert_equal result, @game.instructions
   end
 
