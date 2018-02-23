@@ -6,6 +6,7 @@ class GameTest < Minitest::Test
 
   def setup
     @game = Game.new("rrgb")
+    @player_input1 = Game.new("rrg")
   end
 
   def test_it_exists
@@ -27,5 +28,10 @@ class GameTest < Minitest::Test
     player who solves his opponent's secret code with fewer guesses.)
     assert_equal result, @game.instructions
   end
+
+  def test_guesses_count
+    assert_equal 1, @game.add_guess
+  end
+
 
 end
