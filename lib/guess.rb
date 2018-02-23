@@ -17,7 +17,11 @@ class Guess
   end
 
   def correct_elements
-    (@player_input & @color_sequence).count
+    point = 0
+    @color_sequence.each_with_index do |color, index|
+      point += 1 if player_input[index..-1].include? color
+    end
+      point
   end
 
   def correct_position
